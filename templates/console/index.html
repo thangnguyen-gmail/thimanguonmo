@@ -1,0 +1,18 @@
+{% extends "layout/main.html" %}
+{% block content %}
+
+       <!--In post ra trang chu ... -->
+    <div>
+    <div id="otherNews" class="clearfix"> 
+    <div >
+        {% for post in posts %}
+        <div class="news" >
+            <span class="titleNews">{{ post.pro_name }}</span><br>
+            <span class="day">{{ post.date_create }}</span><br>
+            <a href="/chelbaychitiet?id={{post.pro_id}}">{{ post.description }}</a>
+            <div><img src="{{post.pro_img.url}}" width="240px" , height="300px" /></div>
+          </div>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}
